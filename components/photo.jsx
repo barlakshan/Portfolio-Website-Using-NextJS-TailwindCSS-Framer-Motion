@@ -21,7 +21,7 @@ const Photo = () => {
         >
           <Image src="/assets/hero.png" priority quality={100} fill alt="Hero Image" className="object-contain" />
         </motion.div>
-        {/* Circle */}
+        {/* Circle........... */}
         <motion.svg
           className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
           fill="transparent"
