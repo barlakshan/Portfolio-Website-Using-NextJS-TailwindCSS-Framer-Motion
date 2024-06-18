@@ -1,16 +1,22 @@
-import * as React from "react";
+// Input.js
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { cn } from "@/lib/utils";
+const Input = ({ type, placeholder, className, ...props }) => {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      className={`flex h-[48px] rounded-md border border-white/10 focus:border-accent font-light bg-primary px-4 py-5 text-base placeholder:text-white/60 outline-none ${className}`}
+      {...props}
+    />
+  );
+};
 
-export const Input = (props) =>((
-    { classNema, propTypes, props }, ref) => {
-        return (
-            (
-                <input type={type} className={cn(" flex has-[48] rounded-md border border-white/10 focus:border-accent font-light bg-primary px-4 py-5 text-base placeholder:text-white/60 outline-none", classNema)}>
-                </input>
-            )
-        )
-    });
+Input.propTypes = {
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
 
-
-  
+export default Input;

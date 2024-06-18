@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Input from "@/components/ui/input"; // Adjust the import path if necessary
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -50,15 +50,17 @@ const Contact = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
               {/* input */}
+              <div className="flex gap-4">
+                <Input type="text" placeholder="First Name" className="bg-primary flex-1" />
+                <Input type="text" placeholder="Last Name" className="bg-primary flex-1" />
+              </div>
               <div className="flex flex-col gap-4">
-                <Input type="text" placeholder="First Name" className="bg-white" />
-                <Input type="text" placeholder="Last Name" className="bg-white" />
-                <Input type="email" placeholder="Email Address" className="bg-white" />
-                <Input type="tel" placeholder="Phone Number" className="bg-white" />
+                <Input type="email" placeholder="Email Address" className="bg-primary" />
+                <Input type="tel" placeholder="Phone Number" className="bg-primary" />
               </div>
               {/* select */}
               <Select>
-                <SelectTrigger className="w-full">
+                <SelectTrigger className="w-full bg-primary">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
@@ -71,7 +73,7 @@ const Contact = () => {
                 </SelectContent>
               </Select>
               {/* textarea */}
-              <Textarea className="h-[200px]" placeholder="Type your message here." />
+              <Textarea className="h-[200px] bg-primary" placeholder="Type your message here." />
               {/* button */}
               <Button size="md" className="max-w-40">
                 Send Message
@@ -79,7 +81,7 @@ const Contact = () => {
             </form>
           </div>
           {/* Info */}
-          <div className="flex-1 flex items-center xl:items-end order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="flex-1 flex items-center xl:justfy-end order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => {
                 return (
