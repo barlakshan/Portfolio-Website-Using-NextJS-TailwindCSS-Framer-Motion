@@ -19,7 +19,7 @@ const Photo = () => {
           transition={{ delay: 2.4, duration: 0.4, ease: "easeInOut" }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
-          <Image src="/assets/hero.png" priority quality={100} fill alt="Hero Image" className="object-contain" />
+          <Image src="/assets/im.png" priority quality={100} fill alt="Hero Image" className="object-contain" />
         </motion.div>
         {/* Circle........... */}
         <motion.svg
